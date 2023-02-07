@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bosh sahifa</title>
+    <title>Yangliklar</title>
 </head>
 <body>
-
-{% extends 'base.html' %}
-
-{% block content %}
- <h1>Homepage</h1>
-{% endblock content %}
+    <h1>Kun ynagiliklari</h1>
+    <ul>
+        {% for post in object_list %}
+        <li><h2>{{post.title}}</h2> <br> {{post.text}} <br></li>
+        {% endfor %}
+    </ul>
 
 </body>
 </html>
